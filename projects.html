@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Goyanshi Mohanty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">GM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="page-title">Projects</h1>
+                    <p class="page-subtitle">Explore my data analytics portfolio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="filter-buttons text-center">
+                        <button class="btn btn-primary filter-btn active" data-filter="all">All Projects</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="analytics">Analytics</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="ml">Machine Learning</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="visualization">Visualization</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row" id="projectsGrid">
+
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="analytics">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="sales.jpg" alt="Sales Analytics Dashboard">
+                            <div class="project-overlay">
+                                <button class="btn btn-light view-details" data-project="1">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Sales Analytics Dashboard</h4>
+                            <p>Interactive dashboard for real-time sales monitoring and trend analysis with predictive forecasting.</p>
+                            <div class="project-tools">
+                                <span class="badge bg-primary">Power BI</span>
+                                <span class="badge bg-info">SQL</span>
+                                <span class="badge bg-success">Python</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="https://goyanshi27.github.io/Sales-Analytics-Dashboard/" target="_blank" class="btn btn-sm btn-primary me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i>Live Link
+                                </a>
+                                <a href="https://github.com/goyanshi27/Sales-Analytics-Dashboard" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fab fa-github me-1"></i>Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="ml">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="customer.jpg" alt="Customer Churn Prediction">
+                            <div class="project-overlay">
+                                <button class="btn btn-light view-details" data-project="2">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Customer Churn Prediction</h4>
+                            <p>Machine learning model to predict customer churn with 89% accuracy using ensemble methods.</p>
+                            <div class="project-tools">
+                                <span class="badge bg-warning">Python</span>
+                                <span class="badge bg-danger">Excel</span>
+                                <span class="badge bg-secondary">Scikit-learn</span>
+                                <span class="badge bg-secondary">SQL</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="https://goyanshi27.github.io/Customer_Churn/" target="_blank" class="btn btn-sm btn-primary me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i>Live Link
+                                </a>
+                                <a href="https://github.com/goyanshi27/Customer_Churn" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fab fa-github me-1"></i>Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="visualization">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="vision_IQ.jpg" alt="Data Visualization Suite">
+                            <div class="project-overlay">
+                                <button class="btn btn-light view-details" data-project="3">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>VISION IQ</h4>
+                            <p>Sector Wise Analysis Performance.</p>
+                            <div class="project-tools">
+                                <span class="badge bg-info">Excel</span>
+                                <span class="badge bg-info">SQL</span>
+                                <span class="badge bg-primary">Power BI</span>
+                                <span class="badge bg-success">Python</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="https://goyanshi27.github.io/newproject2/" target="_blank" class="btn btn-sm btn-primary me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i>Live Link
+                                </a>
+                                <a href="https://github.com/goyanshi27/newproject2" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fab fa-github me-1"></i>Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="analytics">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="financial.jpg" alt="Financial Analysis System">
+                            <div class="project-overlay">
+                                <button class="btn btn-light view-details" data-project="4">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Financial Analysis System</h4>
+                            <p>Automated financial reporting system with real-time KPI tracking and anomaly detection.</p>
+                            <div class="project-tools">
+                                <span class="badge bg-primary">Excel</span>
+                                <span class="badge bg-info">Power BI</span>
+                                <span class="badge bg-warning">SQL</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="https://goyanshi27.github.io/newproject/" target="_blank" class="btn btn-sm btn-primary me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i>Live Link
+                                </a>
+                                <a href="https://github.com/goyanshi27/newproject" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fab fa-github me-1"></i>Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="ml">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="img1.jpg" alt="Student Performance Analysis Tool">
+                            <div class="project-overlay">
+                                <button class="btn btn-light view-details" data-project="5">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Student Performance Analysis Tool</h4>
+                            <p>NLP-based Student Performance analysis for student reviews and monitoring.</p>
+                            <div class="project-tools">
+                                <span class="badge bg-danger">Python</span>
+                                <span class="badge bg-info">Excel</span>
+                                <span class="badge bg-primary">Power BI</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="https://github.com/goyanshi27/student-performance-analysis" target="_blank" class="btn btn-sm btn-primary me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i>Live Link
+                                </a>
+                                <a href="https://github.com/goyanshi27/student-performance-analysis" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fab fa-github me-1"></i>Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="visualization">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="image.jpg" alt="Weapon Analytics">
+                            <div class="project-overlay">
+                                <button class="btn btn-light view-details" data-project="6">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Weapon Analytics</h4>
+                            <p>Real-time supply chain monitoring dashboard with predictive inventory management.</p>
+                            <div class="project-tools">
+                                <span class="badge bg-success">Tableau</span>
+                                <span class="badge bg-primary">SQL</span>
+                                <span class="badge bg-warning">Python</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="https://goyanshi27.github.io/gun/" target="_blank" class="btn btn-sm btn-primary me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i>Live Link
+                                </a>
+                                <a href="https://github.com/goyanshi27/gun" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fab fa-github me-1"></i>Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="analytics">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="image.png" alt="HR Analytics Dashboard">
+                            <div class="project-overlay">
+                                <button class="btn btn-light view-details" data-project="7">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Crime Analysis</h4>
+                            <p>Indian State Wise Crime Analysis And Predict The Crime Rate And How It Will Affect...</p>
+                            <div class="project-tools">
+                                <span class="badge bg-primary">Power BI</span>
+                                <span class="badge bg-info">SQL</span>
+                                <span class="badge bg-success">Excel</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="https://goyanshi27.github.io/crime-analysis/" target="_blank" class="btn btn-sm btn-primary me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i>Live Link
+                                </a>
+                                <a href="https://github.com/goyanshi27/crime-analysis" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fab fa-github me-1"></i>Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="ml">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="Screenshot 2026-10-02 191547.png" alt="Price Prediction Model">
+                            <div class="project-overlay">
+                                <button class="btn btn-light view-details" data-project="8">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Education Analysis</h4>
+                            <p>Regression-based model to predict Eduction System Of India And Its Future.</p>
+                            <div class="project-tools">
+                                <span class="badge bg-warning">Python</span>
+                                <span class="badge bg-secondary">Excel</span>
+                                <span class="badge bg-info">AI</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="https://goyanshi27.github.io/education-analysis/" target="_blank" class="btn btn-sm btn-primary me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i>Live Link
+                                </a>
+                                <a href="https://github.com/goyanshi27/education-analysis" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fab fa-github me-1"></i>Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="visualization">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="datavisualization.jpg" alt="Social Media Sentiment Analysis">
+                            <div class="project-overlay">
+                                <button class="btn btn-light view-details" data-project="9">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>India Union Budget Analysis</h4>
+                            <p>Indian Budget Analysis And Sector Wise Budget Distibution.</p>
+                            <div class="project-tools">
+                                <span class="badge bg-danger">Python</span>
+                                <span class="badge bg-success">POWER BI</span>
+                                <span class="badge bg-secondary">AI</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="https://goyanshi27.github.io/indian_budget/" target="_blank" class="btn btn-sm btn-primary me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i>Live Link
+                                </a>
+                                <a href="https://github.com/goyanshi27/indian_budget" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fab fa-github me-1"></i>Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Project 10 -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="visualization">
+                    <div class="project-card reveal">
+                        <div class="project-image">
+                            <img src="cancer.jpg" alt="Social Media Sentiment Analysis">
+                            <div class="project-overlay">
+                                <button class="btn btn-light view-details" data-project="9">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Cancer Analysis</h4>
+                            <p>Cancer Analysis Using AI.</p>
+                            <div class="project-tools">
+                                <span class="badge bg-danger">Python</span>
+                                <span class="badge bg-success">POWER BI</span>
+                                <span class="badge bg-secondary">AI</span>
+                            </div>
+                            <div class="project-links mt-3">
+                                <a href="https://goyanshi27.github.io/Cancer_analysis/" target="_blank" class="btn btn-sm btn-primary me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i>Live Link
+                                </a>
+                                <a href="https://github.com/goyanshi27/Cancer_analysis" target="_blank" class="btn btn-sm btn-dark">
+                                    <i class="fab fa-github me-1"></i>Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content" style="
+                background: linear-gradient(135deg, #0a0e27 0%, #0d1b4b 50%, #0a0e27 100%);
+                border: 1px solid rgba(13,202,240,0.3);
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 0 60px rgba(13,110,253,0.4), 0 0 120px rgba(13,202,240,0.15);
+            ">
+                <!-- Glowing top bar -->
+                <div style="height:4px; background: linear-gradient(90deg, #0d6efd, #0dcaf0, #6f42c1, #0d6efd); background-size:200%; animation: gradientShift 3s linear infinite;"></div>
+                <div class="modal-header border-0 pb-0 px-4 pt-4">
+                    <div>
+                        <div style="font-size:0.75rem; color:#0dcaf0; letter-spacing:3px; text-transform:uppercase; margin-bottom:4px;">Project Details</div>
+                        <h4 class="modal-title fw-bold text-white" id="projectModalTitle"></h4>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body px-4 py-3" id="projectModalBody"></div>
+                <div class="modal-footer border-0 px-4 pb-4">
+                    <button type="button" class="btn btn-outline-light btn-sm px-4" data-bs-dismiss="modal" style="border-radius:30px;">
+                        <i class="fas fa-times me-1"></i> Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes gradientShift {
+            0%   { background-position: 0% }
+            100% { background-position: 200% }
+        }
+        @keyframes cardGlow {
+            0%, 100% { box-shadow: 0 4px 20px rgba(13,110,253,0.3); }
+            50%       { box-shadow: 0 4px 30px rgba(13,202,240,0.6); }
+        }
+
+        /* ── Shared card base ── */
+        .modal-link-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 16px;
+            padding: 1.1rem 1.4rem;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.05);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Live demo card */
+        .modal-link-live {
+            background: rgba(13,110,253,0.12);
+            border-color: rgba(13,202,240,0.4);
+        }
+        .modal-link-live:hover {
+            background: rgba(13,110,253,0.25);
+            border-color: #0dcaf0;
+            transform: translateY(-3px);
+            animation: cardGlow 1.8s ease infinite;
+            color: #fff;
+        }
+
+        /* Repo card */
+        .modal-link-repo {
+            background: rgba(111,66,193,0.12);
+            border-color: rgba(232,62,140,0.4);
+        }
+        .modal-link-repo:hover {
+            background: rgba(111,66,193,0.25);
+            border-color: #e83e8c;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 24px rgba(232,62,140,0.4);
+            color: #fff;
+        }
+
+        /* Disabled / not-available card */
+        .modal-link-disabled {
+            opacity: 0.38;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* Icon circle */
+        .modal-link-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+            color: #fff;
+        }
+
+        /* Text inside card */
+        .modal-link-label {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            margin-bottom: 2px;
+        }
+        .modal-link-title {
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        /* Modal body helpers */
+        .modal-project-desc {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .modal-badges {
+            margin-bottom: 1.2rem;
+        }
+        .modal-badges .badge {
+            margin: 2px;
+        }
+        .modal-choose-hint {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            margin-bottom: 0.9rem;
+        }
+        .modal-links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+        }
+    </style>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

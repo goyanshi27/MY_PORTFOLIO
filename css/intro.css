@@ -1,0 +1,331 @@
+/* ===== INTRO PAGE STYLES ===== */
+
+/* Reset & Base */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ===== INTRO WRAPPER ===== */
+#intro-wrapper {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* ===== VIDEO ===== */
+#intro-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* keep character fully visible, no cropping */
+    object-position: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    /* No filter — character stays natural, clear, bright */
+}
+
+#intro-video.visible {
+    opacity: 1;
+}
+
+/* Fallback animated background (shows when no video / while video loads) */
+#intro-fallback-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: #000;
+    overflow: hidden;
+}
+
+/* Subtle ambient radial glow on fallback */
+#intro-fallback-bg::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vmax;
+    height: 80vmax;
+    border-radius: 50%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 212, 255, 0.04) 0%,
+        rgba(124, 58, 237, 0.04) 40%,
+        transparent 70%
+    );
+    animation: ambientPulse 6s ease-in-out infinite;
+}
+
+@keyframes ambientPulse {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1.08); }
+}
+
+/* Floating particles canvas */
+#particles-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ===== TEXT OVERLAY ===== */
+#intro-text {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    pointer-events: none;
+    /* Sit at bottom-center over the video */
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    opacity: 0;
+    animation: textReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+@keyframes textReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* "Hi, my name is" line */
+.intro-greeting {
+    display: block;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0.4rem;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* "Goyanshi" — the premium highlighted name */
+.intro-name {
+    display: block;
+    font-size: clamp(2.8rem, 9vw, 7rem);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    /* Animated gradient text */
+    background: linear-gradient(
+        90deg,
+        #00d4ff,
+        #a855f7,
+        #f472b6,
+        #facc15,
+        #34d399,
+        #00d4ff
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: nameColorShift 4s linear infinite;
+    /* Multi-layer glow that changes colour with the text */
+    filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.7))
+            drop-shadow(0 0 40px rgba(168, 85, 247, 0.4));
+}
+
+@keyframes nameColorShift {
+    0%   { background-position: 0%   50%; }
+    100% { background-position: 300% 50%; }
+}
+
+/* Thin decorative line under the name */
+.intro-underline {
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff, #a855f7, transparent);
+    margin: 0.6rem auto 0;
+    border-radius: 2px;
+    animation: underlineExpand 1s cubic-bezier(0.22, 1, 0.36, 1) 1.4s forwards;
+}
+
+@keyframes underlineExpand {
+    from { width: 0; }
+    to   { width: min(340px, 80%); }
+}
+
+/* ===== GLOW HALO behind text (purely decorative) ===== */
+#intro-text::before {
+    content: '';
+    position: absolute;
+    inset: -40px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 212, 255, 0.08) 0%,
+        rgba(168, 85, 247, 0.06) 40%,
+        transparent 70%
+    );
+    border-radius: 50%;
+    animation: haloColorCycle 4s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes haloColorCycle {
+    0%   { filter: hue-rotate(0deg);   opacity: 1;   }
+    50%  { filter: hue-rotate(180deg); opacity: 0.7; }
+    100% { filter: hue-rotate(360deg); opacity: 1;   }
+}
+
+/* ===== SKIP BUTTON ===== */
+#skip-btn {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.45rem 1.2rem;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: all 0.25s ease;
+    opacity: 0;
+    animation: skipFadeIn 0.6s ease 1.5s forwards;
+}
+
+#skip-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(0, 212, 255, 0.6);
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(0, 212, 255, 0.35);
+}
+
+@keyframes skipFadeIn {
+    to { opacity: 1; }
+}
+
+/* ===== PROGRESS BAR (video duration indicator) ===== */
+#intro-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, #00d4ff, #a855f7, #f472b6);
+    z-index: 20;
+    transition: width 0.3s linear;
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+}
+
+/* ===== CINEMATIC TRANSITION OVERLAY ===== */
+#transition-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#transition-overlay.fade-in {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ===== CORNER DECORATIONS ===== */
+.corner {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    z-index: 15;
+    opacity: 0.45;
+}
+
+.corner-tl { top: 18px;    left: 18px;   border-top: 1.5px solid #00d4ff; border-left: 1.5px solid #00d4ff; }
+.corner-tr { top: 18px;    right: 18px;  border-top: 1.5px solid #00d4ff; border-right: 1.5px solid #00d4ff; }
+.corner-bl { bottom: 18px; left: 18px;   border-bottom: 1.5px solid #a855f7; border-left: 1.5px solid #a855f7; }
+.corner-br { bottom: 18px; right: 18px;  border-bottom: 1.5px solid #a855f7; border-right: 1.5px solid #a855f7; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    #intro-text {
+        bottom: 8%;
+        padding: 1rem 1.5rem;
+    }
+
+    .intro-greeting {
+        letter-spacing: 0.2em;
+        font-size: clamp(0.8rem, 4vw, 1.1rem);
+    }
+
+    .intro-name {
+        font-size: clamp(2.4rem, 13vw, 4rem);
+    }
+
+    #skip-btn {
+        top: 16px;
+        right: 16px;
+        font-size: 0.75rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .corner {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-greeting {
+        letter-spacing: 0.15em;
+    }
+
+    .intro-name {
+        letter-spacing: 0.03em;
+    }
+}
+
+/* ===== VIDEO-PRESENT MODE: push text to bottom-right on wide screens ===== */
+@media (min-width: 1024px) {
+    body.has-video #intro-text {
+        bottom: 8%;
+        left: auto;
+        right: 5%;
+        transform: none;
+        text-align: right;
+        width: 45%;
+    }
+
+    body.has-video .intro-underline {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Goyanshi Mohanty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: #0a0e27;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 80px;
+        }
+        .navbar {
+            background: rgba(10, 14, 39, 0.95) !important;
+        }
+        .page-header {
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 202, 240, 0.1));
+            margin-bottom: 40px;
+        }
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .resume-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #0dcaf0;
+            border-bottom: 2px solid #0dcaf0;
+            padding-bottom: 10px;
+        }
+        .cert-logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .cert-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .certification-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .certification-item:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s;
+        }
+        .education-item, .experience-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
+        .skill-category {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .skill-category h4 {
+            color: #0dcaf0;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+        }
+        .skill-category li {
+            padding: 0.3rem 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .experience-date {
+            background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        .cert-date {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+        .footer {
+            background: #050816;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+        }
+        .back-to-top.visible {
+            display: block;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .social-link {
+            display: inline-block;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+        .social-link img {
+            display: block;
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">GM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="page-title">Resume</h1>
+            <p class="lead">Professional experience and qualifications</p>
+            <button class="btn btn-primary btn-lg mt-3" onclick="window.print()">
+                <i class="fas fa-download me-2"></i>Download Resume
+            </button>
+        </div>
+    </section>
+
+    <!-- Resume Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-lg-4">
+                <!-- Contact Info -->
+                <div class="resume-section">
+                    <h3 class="section-title">Contact</h3>
+                    <p><i class="fas fa-envelope me-2"></i> goyanshimohanty@gmail.com</p>
+                    <p><i class="fas fa-phone me-2"></i> +91 6370227703</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Bhubaneswar, Odisha, India</p>
+                    
+                    <div class="social-links mt-4">
+                        <a href="https://www.linkedin.com/in/goyanshi-mohanty" target="_blank" class="social-link">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 40px; height: 40px;">
+                        </a>
+                        <a href="https://github.com/goyanshi27" target="_blank" class="social-link">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 40px; height: 40px;">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="resume-section">
+                    <h3 class="section-title">Technical Skills</h3>
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <ul>
+                            <li>Python (Expert)</li>
+                            <li>SQL (Advanced)</li>
+                            <li>HTML/CSS</li>
+                            <li>Java</li>
+                            <li>C</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Platforms</h4>
+                        <ul>
+                            <li>Power BI</li>
+                            <li>Tableau</li>
+                            <li>Excel (Advanced)</li>
+                            <li>TensorFlow</li>
+                            <li>PyTorch</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Databases</h4>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="resume-section">
+                    <h3 class="section-title">Education</h3>
+                    <div class="education-item">
+                        <h4>B.Tech in Computer Science</h4>
+                        <p>Gita Autonomous College</p>
+                        <p>2024-2028 | CGPA: 8.3/10</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Higher Secondary</h4>
+                        <p>Kendriya Vidyalaya No.1</p>
+                        <p>2022-2024 | 72.2%</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Secondary Education</h4>
+                        <p>Kendriya Vidyalaya No.4</p>
+                        <p>2022 | 95.2%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-lg-8">
+                <!-- Professional Summary -->
+                <div class="resume-section">
+                    <h3 class="section-title">Professional Summary</h3>
+                    <p>Results-driven Data Analyst with experience in transforming complex datasets into actionable business insights. Proven expertise in statistical analysis, machine learning, and data visualization.</p>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="resume-section">
+                    <h3 class="section-title">Work Experience</h3>
+                    <div class="experience-item">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h4>Web Developer Intern</h4>
+                            <span class="experience-date">2025-2026</span>
+                        </div>
+                        <p class="text-info">OCAC</p>
+                        <ul>
+                            <li>Developed full-stack web applications using Django framework</li>
+                            <li>Built Student Management System and Employee Management System</li>
+                            <li>Worked with Python, Pandas, NumPy for data handling</li>
+                            <li>Designed responsive UIs using HTML, CSS, JavaScript</li>
+                            <li>Managed SQL databases for efficient data operations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="resume-section">
+                    <h3 class="section-title">Certifications</h3>
+                    
+                    <!-- Accenture -->
+                    <div class="certification-item">
+                        <div class="cert-logo" style="background:#0a6b8a; padding:6px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+                                <!-- ">" chevron symbol above t -->
+                                <text x="62" y="36" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="white">&gt;</text>
+                                <!-- "accenture" lowercase text -->
+                                <text x="50" y="68" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="white" text-anchor="middle" letter-spacing="-0.3">accenture</text>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5>ACCENTURE</h5>
+                            <p class="mb-1">Digital Skills: Artificial Intelligence</p>
+                            <span class="cert-date">2023</span>
+                        </div>
+                    </div>
+
+                    <!-- Coursera -->
+                    <div class="certification-item">
+                        <div class="cert-logo" style="background:#fff; padding:4px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+                                <!-- Blue rounded square -->
+                                <rect x="4" y="4" width="92" height="92" rx="20" ry="20" fill="#2A73CC"/>
+                                <!-- "coursera" white lowercase text -->
+                                <text x="50" y="58" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle">coursera</text>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5>COURSERA</h5>
+                            <p class="mb-1">Data Analysis with Microsoft Excel</p>
+                            <span class="cert-date">2022</span>
+                        </div>
+                    </div>
+
+                    <!-- AWS -->
+                    <div class="certification-item">
+                        <div class="cert-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/320px-Amazon_Web_Services_Logo.svg.png" alt="AWS"
+                                 onerror="this.src='https://img.icons8.com/color/96/amazon-web-services.png'">
+                        </div>
+                        <div>
+                            <h5>AWS</h5>
+                            <p class="mb-1">Machine Learning & Data Engineering Foundations</p>
+                            <span class="cert-date">2021</span>
+                        </div>
+                    </div>
+
+                    <!-- Deloitte -->
+                    <div class="certification-item">
+                        <div class="cert-logo" style="background:#fff; padding:6px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="60" height="60">
+                                <!-- "Deloitte" bold black text -->
+                                <text x="50" y="58" font-family="Arial Black,sans-serif" font-size="15" font-weight="900" fill="#000" text-anchor="middle">Deloitte</text>
+                                <!-- green dot -->
+                                <circle cx="83" cy="52" r="5" fill="#86BC25"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5>DELOITTE</h5>
+                            <p class="mb-1">Data Analytics Job Simulation</p>
+                            <span class="cert-date">2020</span>
+                        </div>
+                    </div>
+
+                    <!-- HP -->
+                    <div class="certification-item">
+                        <div class="cert-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/320px-HP_logo_2012.svg.png" alt="HP"
+                                 onerror="this.src='https://img.icons8.com/color/96/hp.png'">
+                        </div>
+                        <div>
+                            <h5>HP</h5>
+                            <p class="mb-1">Data Science & Analytics</p>
+                            <span class="cert-date">2025</span>
+                        </div>
+                    </div>
+
+                    <!-- IBM -->
+                    <div class="certification-item">
+                        <div class="cert-logo" style="background:#1F70C1;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/320px-IBM_logo.svg.png" alt="IBM"
+                                 onerror="this.src='https://img.icons8.com/color/96/ibm.png'">
+                        </div>
+                        <div>
+                            <h5>IBM</h5>
+                            <p class="mb-1">Data Analysis & Visualization with Python</p>
+                            <span class="cert-date">2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Microsoft -->
+                    <div class="certification-item">
+                        <div class="cert-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/320px-Microsoft_logo.svg.png" alt="Microsoft"
+                                 onerror="this.src='https://img.icons8.com/color/96/microsoft.png'">
+                        </div>
+                        <div>
+                            <h5>MICROSOFT</h5>
+                            <p class="mb-1">Power BI & Data Analytics</p>
+                            <span class="cert-date">2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Oracle -->
+                    <div class="certification-item">
+                        <div class="cert-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/320px-Oracle_logo.svg.png" alt="Oracle"
+                                 onerror="this.src='https://img.icons8.com/color/96/oracle-logo.png'">
+                        </div>
+                        <div>
+                            <h5>ORACLE</h5>
+                            <p class="mb-1">Oracle Certified Foundations Associate</p>
+                            <span class="cert-date">2025</span>
+                        </div>
+                    </div>
+
+                    <!-- TATA -->
+                    <div class="certification-item">
+                        <div class="cert-logo" style="background:#fff; padding:4px;">
+                            <!-- Tata real logo: blue oval with T cutouts + TATA wordmark -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="60" height="66">
+                                <!-- Blue oval -->
+                                <ellipse cx="50" cy="34" rx="46" ry="32" fill="#4a6fba"/>
+                                <!-- White cutout: left gap of T -->
+                                <path d="M27 18 L42 18 L50 52 L38 52 Z" fill="white"/>
+                                <!-- White cutout: right gap of T -->
+                                <path d="M73 18 L58 18 L50 52 L62 52 Z" fill="white"/>
+                                <!-- White horizontal line across top of T -->
+                                <rect x="27" y="18" width="46" height="9" rx="4" fill="white"/>
+                                <!-- TATA text -->
+                                <text x="50" y="100" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="#4a6fba" text-anchor="middle" letter-spacing="2">TATA</text>
+                            </svg>
+                        </div>
+                        <div>
+                            <h5>TATA</h5>
+                            <p class="mb-1">Data Visualisation: Business Insights</p>
+                            <span class="cert-date">2025</span>
+                        </div>
+                    </div>
+
+                    <!-- TCS -->
+                    <div class="certification-item">
+                        <div class="cert-logo" style="background:#000; padding:6px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/320px-Tata_Consultancy_Services_Logo.svg.png" alt="TCS"
+                                 style="width:100%; height:100%; object-fit:contain;"
+                                 onerror="this.parentElement.style.background='#111'; this.outerHTML='<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 120\' width=\'60\' height=\'60\'><defs><linearGradient id=\'tg\' x1=\'0%\' y1=\'0%\' x2=\'100%\' y2=\'100%\'><stop offset=\'0%\' style=\'stop-color:#f7b500\'/><stop offset=\'30%\' style=\'stop-color:#e8401c\'/><stop offset=\'60%\' style=\'stop-color:#e91e8c\'/><stop offset=\'100%\' style=\'stop-color:#7b2d8b\'/></linearGradient></defs><text x=\'10\' y=\'90\' font-family=\'Arial Rounded MT Bold,Arial,sans-serif\' font-size=\'90\' font-weight=\'900\' fill=\'url(#tg)\'>tcs</text></svg>';">
+                        </div>
+                        <div>
+                            <h5>TCS</h5>
+                            <p class="mb-1">YUVA AI For All</p>
+                            <span class="cert-date">2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Goyanshi Mohanty. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
