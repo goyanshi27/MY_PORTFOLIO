@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://goyanshi27.github.io/MY_PORTFOLIO/sitemap.xml
